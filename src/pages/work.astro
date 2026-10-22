@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+const samples = [
+  { tag: 'Engineering / 3D', title: 'A technical drawing', text: 'Replace this card with a drawing or 3D visualization you have permission to share.' },
+  { tag: 'Digital product', title: 'A useful online experience', text: 'Add a website, app or e-commerce project with a short description of your role.' },
+  { tag: 'Creative content', title: 'A story for a brand', text: 'Show approved video, design or social content and explain what you contributed.' },
+];
+---
+<BaseLayout title="Selected Work | MultiCraft Studio" description="A portfolio page ready for MultiCraft Studio's engineering, digital and creative project examples." currentPath="/work/">
+  <Header currentPath="/work/" />
+  <main class="wrap"><section class="page-hero"><span class="eyebrow">Selected work</span><h1>Proof is in the<br /><em>making.</em></h1><p>We’re preparing this space for real project stories. Add work you have permission to share, with honest descriptions of the brief and your contribution.</p></section><div class="portfolio-grid">{samples.map(sample=><article class="portfolio-card"><div class="portfolio-visual"><span class="visual-tag">{sample.tag} · Sample slot</span></div><div class="portfolio-info"><h3>{sample.title}</h3><p>{sample.text}</p></div></article>)}</div><p class="placeholder-note">All cards above are clearly marked sample slots and do not represent completed client projects.</p></main>
+  <Footer />
+</BaseLayout>

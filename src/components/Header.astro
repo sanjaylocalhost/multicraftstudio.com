@@ -1,0 +1,15 @@
+---
+const { currentPath = '/' } = Astro.props;
+const links = [
+  { href: '/services/', label: 'Services' },
+  { href: '/work/', label: 'Our work' },
+  { href: '/about/', label: 'About' },
+];
+---
+<header class="site-header wrap">
+  <a class="brand" href="/" aria-label="MultiCraft Studio home"><span class="brand-mark">M<span>+</span></span><span>multicraft<span class="brand-light">studio</span></span></a>
+  <nav aria-label="Main navigation">
+    {links.map((link) => <a class:list={{ active: currentPath.startsWith(link.href) }} href={link.href}>{link.label}</a>)}
+  </nav>
+  <a class="button button-small header-cta" href="/contact/">Let’s talk <span aria-hidden="true">↗</span></a>
+</header>

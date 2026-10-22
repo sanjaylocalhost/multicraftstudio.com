@@ -1,0 +1,38 @@
+export const services = [
+  {
+    number: '01',
+    slug: 'engineering-3d',
+    title: 'Engineering & 3D',
+    intro: 'Clear technical drawings and thoughtful visualizations that help ideas take shape.',
+    items: ['Civil, mechanical & electrical drawings', 'CAD drafting', '2D / 3D modeling', '3D visualization'],
+    icon: '⌘',
+    tone: 'lime',
+  },
+  {
+    number: '02',
+    slug: 'digital-products',
+    title: 'Digital Products',
+    intro: 'Useful digital experiences built to help your business get found and grow.',
+    items: ['Business websites & SEO', 'E-commerce websites and apps', 'iOS & Android apps'],
+    icon: '↗',
+    tone: 'blue',
+  },
+  {
+    number: '03',
+    slug: 'creative-studio',
+    title: 'Creative Studio',
+    intro: 'A consistent story for your brand, from the first frame to the final post.',
+    items: ['Video shoots & editing', 'Graphic design & branding', 'Social media management', 'Digital content creation'],
+    icon: '◒',
+    tone: 'peach',
+  },
+  {
+    number: '04',
+    slug: 'space-survey',
+    title: 'Space & Survey',
+    intro: 'Practical ways to understand, plan and improve the spaces around you.',
+    items: ['Interior concepts & layouts', 'Wood interiors & custom furniture', 'Land & drone surveys'],
+    icon: '⌂',
+    tone: 'lavender',
+  },
+];

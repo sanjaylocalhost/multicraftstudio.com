@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { services } from '../data/services.js';
+import '../styles/global.css';
+---
+<BaseLayout title="MultiCraft Studio | Engineering, Digital & Creative Services" description="One collaborative studio for engineering drawings, digital products, interiors, surveys and creative content." currentPath="/">
+  <Header currentPath="/" />
+  <main>
+    <section class="wrap hero">
+      <div><span class="eyebrow">A multidisciplinary freelance studio</span><h1>Good ideas,<br /><em>made real.</em></h1><p class="hero-copy">From a first sketch to a finished digital experience, we bring practical skills and creative thinking together under one roof.</p><div class="hero-actions"><a class="button" href="/contact/">Tell us about your project <span aria-hidden="true">↗</span></a><a class="text-link" href="/services/">Explore services <span aria-hidden="true">→</span></a></div></div>
+      <div class="hero-art" role="img" aria-label="Abstract architectural drawing on a drafting board"><span class="art-label">IDEAS IN GOOD HANDS</span><div class="art-board"><div class="board-top"></div><div class="plan"></div></div><div class="art-stamp"><div>One team<span>↗</span>many skills</div></div><span class="hero-note">Engineering · Digital · Creative</span></div>
+    </section>
+    <div class="wrap trust-strip"><strong>One studio, four ways to help</strong><span>Engineering & 3D</span><span>Digital products</span><span>Creative studio</span><span>Space & survey</span></div>
+    <section class="wrap section" aria-labelledby="services-title"><div class="section-heading"><div><span class="eyebrow">What we do</span><h2 id="services-title">Many disciplines.<br />One thoughtful team.</h2></div><p>Find the expertise you need, or bring us a project that crosses disciplines. We’ll help shape the right team around it.</p></div><div class="service-grid">{services.map((service)=><article class:list={['service-card', `tone-${service.tone}`]}><div class="service-top"><span class="service-icon" aria-hidden="true">{service.icon}</span><span class="service-number">{service.number} / 04</span></div><h3>{service.title}</h3><p>{service.intro}</p><a class="text-link" href={`/services/#${service.slug}`}>Explore this area <span aria-hidden="true">→</span></a></article>)}</div></section>
+    <section class="wrap split-band"><div><span class="eyebrow">A small team, connected skills</span><h2>From the first conversation to the final detail.</h2><p>Three collaborators bring digital, engineering and content skills together. For specialist work, we’ll clarify the scope and who is responsible before a project begins.</p><a class="button button-light" href="/about/">Meet the studio <span aria-hidden="true">↗</span></a></div><div class="split-points"><div class="split-point"><span>↗</span>Clear communication and agreed scope</div><div class="split-point"><span>↗</span>Flexible support for different project sizes</div><div class="split-point"><span>↗</span>Practical thinking, careful execution</div></div></section>
+    <section class="wrap section"><div class="section-heading"><div><span class="eyebrow">A look at what we can make</span><h2>Work worth showing.</h2></div><a class="text-link" href="/work/">View the work page <span aria-hidden="true">→</span></a></div><div class="portfolio-grid"><article class="portfolio-card"><div class="portfolio-visual"><span class="visual-tag">CAD / 3D · Sample space</span></div><div class="portfolio-info"><h3>Space & form</h3><p>Replace with a real drawing or visualization.</p></div></article><article class="portfolio-card"><div class="portfolio-visual"><span class="visual-tag">Digital · Sample concept</span></div><div class="portfolio-info"><h3>Digital presence</h3><p>Replace with a real website or app project.</p></div></article><article class="portfolio-card"><div class="portfolio-visual"><span class="visual-tag">Creative · Sample content</span></div><div class="portfolio-info"><h3>Stories in motion</h3><p>Replace with real video or brand work.</p></div></article></div><p class="placeholder-note">These are visual placeholders, not completed client projects.</p></section>
+  </main>
+  <Footer />
+</BaseLayout>

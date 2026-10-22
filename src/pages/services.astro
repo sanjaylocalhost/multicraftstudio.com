@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { services } from '../data/services.js';
+import '../styles/global.css';
+---
+<BaseLayout title="Services | MultiCraft Studio" description="Explore engineering and 3D drafting, websites and apps, creative content, interiors and surveying services." currentPath="/services/">
+  <Header currentPath="/services/" />
+  <main class="wrap"><section class="page-hero"><span class="eyebrow">Our services</span><h1>What can we help<br /><em>you make?</em></h1><p>Choose one service or bring us a bigger challenge. We’ll discuss your goals, agree the scope and connect you with the right member of the studio.</p></section>
+    {services.map((service)=><section class="service-detail" id={service.slug}><div><span class="eyebrow">{service.number} / 04</span><h2>{service.title}</h2><p>{service.intro}</p><a class="button button-small" href={`/contact/?service=${service.slug}`}>Ask about this service <span aria-hidden="true">↗</span></a></div><div><ul class="detail-list">{service.items.map(item=><li>{item}</li>)}</ul></div></section>)}
+    <p class="placeholder-note">Service availability, project scope and location coverage are confirmed during the initial conversation.</p>
+  </main><Footer />
+</BaseLayout>

@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+<BaseLayout title="Contact | MultiCraft Studio" description="Tell MultiCraft Studio about your engineering, digital, interior, survey or creative project." currentPath="/contact/">
+  <Header currentPath="/contact/" />
+  <main class="wrap"><section class="page-hero"><span class="eyebrow">Start a conversation</span><h1>What are you<br /><em>thinking about?</em></h1><p>Tell us a little about the project. We’ll get back to you to understand the goals, timing and next steps.</p></section><section class="contact-layout"><aside class="contact-aside"><span class="eyebrow">Contact details</span><h2>We’d love to hear from you.</h2><p>Replace these placeholders with your real contact details before publishing.</p><div class="contact-line"><small>Email</small><a href="mailto:[Email]">[Email]</a></div><div class="contact-line"><small>Phone</small><a href="tel:[Phone]">[Phone]</a></div><div class="contact-line"><small>WhatsApp</small><a href="[WhatsApp link]">Message the studio ↗</a></div><div class="contact-line"><small>Location / service area</small>[Business location] · [Service area]</div></aside><form class="contact-form" action="mailto:[Email]" method="post" enctype="text/plain"><div class="form-row"><label>Your name<input name="name" autocomplete="name" required placeholder="Name" /></label><label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com" /></label></div><label>What do you need help with?<select name="service"><option value="">Choose a service area</option><option>Engineering & 3D</option><option>Digital Products</option><option>Creative Studio</option><option>Space & Survey</option><option>Something else</option></select></label><label>Tell us about your project<textarea name="message" required placeholder="A few details about your idea, timing or goals…"></textarea></label><button class="button" type="submit">Prepare email <span aria-hidden="true">↗</span></button><p class="form-note">This starter form opens your email app. Connect a form service or backend later for direct website submissions.</p></form></section></main>
+  <Footer />
+</BaseLayout>
